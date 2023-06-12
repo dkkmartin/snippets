@@ -1,15 +1,42 @@
 ---
+import '../styles/global.css';
+import Snippets from '../layouts/Snippets.astro';
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Snippets</title>
+  </head>
+  <body>
+    <main>
+      <Snippets title="Gallerier" para="Billedgallerier med pile, thumbnails og lightbox" />
+      <Snippets title="Test" para="Tester Tester Tester" />
+      <Snippets title="Test" para="Tester Tester TesterTester Tester" />
+      <Snippets
+        title="Test"
+        para="Tester TesterTesterTester TesterTesterTester TesterTesterTester"
+      />
+      <Snippets title="Test" para="Tester Tester" />
+      <Snippets title="Test" para="Tes" />
+      <Snippets title="Test" para="Tester" />
+    </main>
+  </body>
 </html>
+
+<style>
+  body {
+    background-color: #0d1b2a;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5em;
+    padding: 3em;
+  }
+</style>
