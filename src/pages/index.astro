@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import Snippets from '../layouts/Snippets.astro';
+import Defaultlayout from '../layouts/defaultlayout.astro';
 ---
 
 <html lang="en">
@@ -12,30 +13,36 @@ import Snippets from '../layouts/Snippets.astro';
     <title>Snippets</title>
   </head>
   <body>
-    <main>
-      <Snippets title="Gallerier" para="Billedgallerier med pile, thumbnails og lightbox" />
-      <Snippets title="Test" para="Tester Tester Tester" />
-      <Snippets title="Test" para="Tester Tester TesterTester Tester" />
-      <Snippets
-        title="Test"
-        para="Tester TesterTesterTester TesterTesterTester TesterTesterTester"
-      />
-      <Snippets title="Test" para="Tester Tester" />
-      <Snippets title="Test" para="Tes" />
-      <Snippets title="Test" para="Tester" />
-    </main>
+    <Defaultlayout class="section">
+      <a href="/galleries/">
+        <Snippets title="Gallerier" para="Billedgallerier med pile, thumbnails og lightbox" />
+      </a>
+      <a href="">
+        <Snippets title="Form" para="Form og form validerings tekniker" />
+      </a>
+      <a href="">
+        <Snippets title="Læs mere knap" para="Læs mere knap med javascript" />
+      </a>
+      <a href="">
+        <Snippets title="LocalStorage" para="Localstorage eksempler" />
+      </a>
+      <a href="">
+        <Snippets title="Navmenu" para="Med drop-down, modal og mere" />
+      </a>
+      <a href="">
+        <Snippets title="Media queries" para="Eksempler på media queries" />
+      </a>
+      <a href="">
+        <Snippets title="Font Awesome" para="Anvendelse af Font Awesome" />
+      </a>
+    </Defaultlayout>
   </body>
 </html>
 
 <style>
-  body {
-    background-color: #0d1b2a;
-    font-family: 'Roboto', sans-serif;
-  }
-
-  main {
+  .section {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     gap: 1.5em;
     padding: 3em;
   }
