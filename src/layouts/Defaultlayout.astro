@@ -1,18 +1,21 @@
 ---
+import '../styles/global.css';
 const { class: className } = Astro.props;
 ---
 
-<main>
-  <section class={className}>
-    <slot />
-  </section>
-</main>
-
-<style>
-  main {
-    background-color: #0d1b2a;
-    font-family: 'Roboto', sans-serif;
-    height: 100vh;
-    width: 100vw;
-  }
-</style>
+<html lang="dk">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Snippets</title>
+  </head>
+  <body>
+    <main>
+      <section class={className}>
+        <slot />
+      </section>
+    </main>
+  </body>
+</html>

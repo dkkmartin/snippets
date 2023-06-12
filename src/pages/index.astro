@@ -1,49 +1,37 @@
 ---
 import '../styles/global.css';
 import Snippets from '../layouts/Snippets.astro';
-import Defaultlayout from '../layouts/defaultlayout.astro';
+import Defaultlayout from '../layouts/Defaultlayout.astro';
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Snippets</title>
-  </head>
-  <body>
-    <Defaultlayout class="section">
-      <a href="/galleries/">
-        <Snippets title="Gallerier" para="Billedgallerier med pile, thumbnails og lightbox" />
-      </a>
-      <a href="">
-        <Snippets title="Form" para="Form og form validerings tekniker" />
-      </a>
-      <a href="">
-        <Snippets title="Læs mere knap" para="Læs mere knap med javascript" />
-      </a>
-      <a href="">
-        <Snippets title="LocalStorage" para="Localstorage eksempler" />
-      </a>
-      <a href="">
-        <Snippets title="Navmenu" para="Med drop-down, modal og mere" />
-      </a>
-      <a href="">
-        <Snippets title="Media queries" para="Eksempler på media queries" />
-      </a>
-      <a href="">
-        <Snippets title="Font Awesome" para="Anvendelse af Font Awesome" />
-      </a>
-    </Defaultlayout>
-  </body>
-</html>
+<Defaultlayout class="section">
+  <a href="/galleries/">
+    <Snippets title="Gallerier" para="Billedgallerier med pile, thumbnails og lightbox" />
+  </a>
+  <a href="/form/">
+    <Snippets title="Form" para="Form og form validerings tekniker" />
+  </a>
+  <a href="/readmore/">
+    <Snippets title="Læs mere knap" para="Læs mere knap med javascript" />
+  </a>
+  <a href="/localstorage/">
+    <Snippets title="LocalStorage" para="Localstorage eksempler" />
+  </a>
+  <a href="/navmenu/">
+    <Snippets title="Navmenu" para="Med drop-down, modal og mere" />
+  </a>
+  <a href="/mediaqueries/">
+    <Snippets title="Media queries" para="Eksempler på media queries" />
+  </a>
+  <a href="/fontawesome/">
+    <Snippets title="Font Awesome" para="Anvendelse af Font Awesome" />
+  </a>
+</Defaultlayout>
 
 <style>
   .section {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1.5em;
-    padding: 3em;
   }
 </style>

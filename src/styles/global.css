@@ -11,6 +11,14 @@ h1 {
   color: #e0e1dd;
 }
 
+h2,
+h3,
+h4,
+h5 {
+  font-size: 2em;
+  color: #778da9;
+}
+
 p {
   color: #778da9;
 }
@@ -18,4 +26,13 @@ p {
 a {
   color: initial;
   text-decoration: none;
+}
+
+body {
+  background-color: #0d1b2a;
+}
+
+main {
+  font-family: 'Roboto', sans-serif;
+  padding: 3em;
 }
